@@ -52,8 +52,6 @@
       paco: () => osc(2, 0.5, 2).colorama(0.1),
       naked: () => gradient(()=>a.fft[0]*100).modulateRepeat(noise(2),20,50,8,8).kaleid(99).colorama(()=>mouse.y/10).blend((()=>a.fft[3]*99),9).pixelate(9,9),
       delusion: () => gradient([6,8,4,5,10,7]).colorama().mult(osc(99)).kaleid(199),
-      lobotomy:() => osc(3,0.03,2).mult(shape(90).scale([0.2,0.8,0.001])).out(o1)
-        src(o0).modulateHue(src(o0).scale(1.02),2).rotate(.005).colorama(0.1).layer(src(o1).kaleid(10).luma(0.2,1e-6)),
 
 magt : () => {
   osc(40,0.5,() => a.fft[0]*200).out(o2)
