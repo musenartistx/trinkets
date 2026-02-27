@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hydra Sublenguaje</title>
+  <script src="https://unpkg.com/hydra-synth"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+      background: black;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+    }
+
+    #input {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      max-width: 600px;
+      height: 80px;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 18px;
+      border: 2px solid white;
+      border-radius: 10px;
+      padding: 10px;
+      z-index: 10;
+      backdrop-filter: blur(4px);
+      resize: none;
+    }
+  </style>
+</head>
+<body>
+  <textarea id="input" placeholder="Escribe: pabaras y letras cortas"></textarea>
+
+  <script>
+    const hydra = new Hydra({ detectAudio: false });
+
+    const palabras = {
+      naked: () => gradient(()=>a.fft[0]*100).modulateRepeat(noise(2),20,50,8,8).kaleid(99).colorama(()=>mouse.y/10).blend((()=>a.fft[3]*99),9).pixelate(9,9),
+      delusion: () => gradient([6,8,4,5,10,7]).colorama().mult(osc(99)).kaleid(199),
+      lobotomy:() => osc(3,0.03,2).mult(shape(90).scale([0.2,0.8,0.001])).out(o1)
+        src(o0).modulateHue(src(o0).scale(1.02),2).rotate(.005).colorama(0.1).layer(src(o1).kaleid(10).luma(0.2,1e-6)),
+
+magt : () => {
+  osc(40,0.5,() => a.fft[0]*200).out(o2)
+  let shape = osc(60, 0.1, 2)
+    .mult(noise(1, 4))
+    .rotate(() => (Math.random() - 0.5) * 0.5 + Math.sin(time * 0.2) * 0.2)
+  shape.out(o0)
+  return shape
+},
+};
+
+    const input = document.getElementById("input");
+
+    input.addEventListener("input", () => {
+      const texto = input.value.toLowerCase().trim();
+
+      // Si contiene comas: modulación encadenada
+      if (texto.includes(",")) {
+        const modWords = texto.split(",").map(w => w.trim()).filter(w => palabras[w]);
+        if (modWords.length >= 2) {
+          let base = palabras[modWords[0]]();
+          for (let i = 1; i < modWords.length; i++) {
+            base = palabras[modWords[i]]().modulate(base, 0.5 + 0.3 * Math.random()); // modulación aleatoria
+          }
+          base.out();
+          return;
+        }
+      }
+
+      // Si contiene comas: modulación encadenada
+      if (texto.includes("x")) {
+        const modWords = texto.split(",").map(w => w.trim()).filter(w => palabras[w]);
+        if (modWords.length >= 2) {
+          let base = palabras[modWords[0]]();
+          for (let i = 1; i < modWords.length; i++) {
+            base = palabras[modWords[i]]().modulateScale(base, 0.5 + 0.3 * Math.random()); // modulación aleatoria
+          }
+          base.out();
+          return;
+        }
+      }
+
+      // Si no hay coma, renderiza todo en capas independientes
+      const entradas = texto.split(/\s+/).map(w => w.trim()).filter(w => palabras[w]);
+      if (entradas.length > 0) {
+        // Componer blend entre todas
+        let comp = palabras[entradas[0]]();
+        for (let i = 1; i < entradas.length; i++) {
+          comp = comp.diff(palabras[entradas[i]](), 0.5);
+        }
+        comp.out();
+      }
+    });
+  </script>
+</body>
+</html>
