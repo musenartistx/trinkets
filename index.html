@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Hydra Sublenguaje</title>
+  <title>trinkets | musenartist</title>
   <script src="https://unpkg.com/hydra-synth"></script>
   <style>
     html, body {
@@ -63,14 +63,6 @@ h: () => noise(10,4,10).modulateRepeatX(osc([15,9]),0.5).colorama(-0.590).mult(o
 i: () => osc().scale(10).rotate(4,5).kaleid(10).colorama(0.9).modulateScrollX(osc(),0.5).mult(voronoi([5,8],8)).colorama(0.8),
 j: () => voronoi([9,15],3,4).colorama(-0.6).modulatePixelate(voronoi([9,10]),0.5).colorama(1).mult(osc([3,5]),0.5).colorama(-0.2).luma(0.3,0.5),
 k: () => osc([15,5,1],25,3).colorama(-0.10).modulateKaleid(noise([5,1]),0.5).rotate(8,5).scale(0.45,3,5).colorama(-5),
-
-magt : () => {
-  osc(40,0.5,() => a.fft[0]*200).out(o2)
-  let shape = osc(60, 0.1, 2)
-    .mult(noise(1, 4))
-    .rotate(() => (Math.random() - 0.5) * 0.5 + Math.sin(time * 0.2) * 0.2)
-  shape.out(o0)
-  return shape
 },
 };
 
