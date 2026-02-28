@@ -51,11 +51,11 @@
     const palabras = {
       obsessed: () => gradient([6,8,4,5,10,7]).colorama().mult(osc(99)).kaleid(199),
       microplastics: ()=> osc(26.522, 1.061, -3.628)
-      .mask(gradient(5.999, 3.755, -0.002))
+      .mask(gradient(5.999)
       .modulateRepeat(voronoi(99, 0.031, 0.002), 0.919, 0.41)
       .scale([.8, .6, .5, 0.662])
       .modulateKaleid(noise([1.07, 0.956]))
-  .modulateRepeatY(shape([0.04,0.03,0.05,0.09].fast(0.001)),1,0), 
+  .modulateRepeatY(shape([4,3,5,9].fast(0.01),0.1),1,0), 
 },
 };
 
