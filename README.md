@@ -12,4 +12,6 @@
 
 '[pretty](https://hydra.ojack.xyz/?sketch_id=n8Ta7QS0FL9tdU0h)'
 
+'[hot](https://hydra.ojack.xyz/?sketch_id=8LoSG3uLdqHKyV3w)'
+
 '[nousedelusion](https://hydra.ojack.xyz/?code=JTBBJTBBJTIwJTJGJTJGJTIwJTQwbXVzZW5hcnRpc3R4JTBBJTJGJTJGJTIwVHJpbmtldHMlN0NEZWx1c2lvbiUwQSUwQWdyYWRpZW50KCU1QjYlMkM4JTJDNCUyQzUlMkMxMCUyQzclNUQpJTBBJTIwJTIwLmNvbG9yYW1hKCklMEElMjAlMjAubXVsdChvc2MoOTkpKSUwQSUyMCUyMC5rYWxlaWQoMTk5KSUwQSUyMCUyMC5vdXQoKQ%3D%3D)'
