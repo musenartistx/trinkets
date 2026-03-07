@@ -18,4 +18,6 @@
 
 '[naked](https://hydra.ojack.xyz/?sketch_id=HkZdDwYVrJ4uL9gJ)'
 
+https://hydra.ojack.xyz/?sketch_id=puIbsophAMQaiw1m
+
 '[nousedelusion](https://hydra.ojack.xyz/?code=JTBBJTBBJTIwJTJGJTJGJTIwJTQwbXVzZW5hcnRpc3R4JTBBJTJGJTJGJTIwVHJpbmtldHMlN0NEZWx1c2lvbiUwQSUwQWdyYWRpZW50KCU1QjYlMkM4JTJDNCUyQzUlMkMxMCUyQzclNUQpJTBBJTIwJTIwLmNvbG9yYW1hKCklMEElMjAlMjAubXVsdChvc2MoOTkpKSUwQSUyMCUyMC5rYWxlaWQoMTk5KSUwQSUyMCUyMC5vdXQoKQ%3D%3D)'
