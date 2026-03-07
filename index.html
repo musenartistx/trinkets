@@ -50,8 +50,15 @@
 
     const palabras = {
       obsessed: () => gradient([6,8,4,5,10,7]).colorama().mult(osc(99)).kaleid(199),
-   
-      
+      microplastics: () =>  osc(26.522, 1.061, -3.628) .mask(gradient(6)).modulateRepeat(voronoi(99, 0.031, 0.002), 0.919, 0.41).scale([0.8,0.6,0.5,0.662]).modulateKaleid(noise([1.07, 0.956])).modulateRepeatY(shape([4,3,5,9].fast(0.01),2),1,1,0.5),
+      rockstar: () => osc(29,-.001, 3.628).modulateRepeat(shape(4, 0.6,0.6), 6, 3,.8).modulatePixelate(voronoi(13, 0.1), 34.965, 0.049).blend(voronoi(20,1,0.1),2).mult(noise(22,0.6),1).kaleid(5).scale(1.3),
+      honeysuckle: () => osc(50, 0.5).color(1,1,0).mask(shape(6,.3, 0.01)).modulatePixelate(noise(0.9, 0.5),50,5).mask(shape(6,0.5,0.5),8,.1).modulateRepeat(shape(4,2),6,4,1,1.6).kaleid(6).rotate(() => mouse.x * 0.02),
+      pretty: () => osc(10, 0.01, 1).color(1, 0.1, 0.3).kaleid(2).modulate(noise(3, 0.1)).modulateRotate(osc(9),1,()=> mouse.y),
+      hot: () => s0.initCam()a.show()src(s0).colorama(0.8,()=>a.fft).modulate(o0,()=>a.fft[0]),
+      fem: () => voronoi(()=>a.fft[0]*30).kaleid(5,5).modulateRepeat(shape(4,0,3),50,50,5,8).rotate(5).add(osc(30,0.1,1.5).kaleid(()=>a.fft[1]*10).mask(shape(55,1,80))),
+      o: () => osc(9,0.1).kaleid(4,4).modulateRepeat(shape(4,4,4),35,30,5,5),
+      naked: () => gradient(()=>a.fft[0]*100).modulateRepeatX(noise(2),20,50,4).kaleid(()=>mouse.x/50).colorama(()=>mouse.y/10).mult(osc(()=>a.fft[3]*80)).pixelate(20),
+        
 },
 };
 
