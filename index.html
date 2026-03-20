@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Hydra Sublenguaje</title>
+  <title>trinkets by musenartistx</title>
   <script src="https://unpkg.com/hydra-synth"></script>
   <style>
 	html, body {
@@ -157,7 +157,7 @@
   </style>
 </head>
 <body>
-  <button id="wordButton">palabras</button>
+  <button id="wordButton">words</button>
  
   <div id="wordPanel">
 	<button class="close-panel" id="closePanel">✕</button>
@@ -165,10 +165,10 @@
 	<div class="word-list" id="wordList"></div>
   </div>
 
-  <textarea id="input" placeholder="Escribe palabras: paco, mestizo, a, b, c..."></textarea>
+  <textarea id="input" placeholder="Escribe las palabras de la lista en el orden que quieras, puedes usar comas entre ellas"></textarea>
 
   <script>
-	const hydra = new Hydra({ detectAudio: false });
+	const hydra = new Hydra({ detectAudio: true });
 
 	const palabras = {
   	obsessed: () => gradient([6,8,4,5,10,7]).colorama().mult(osc(99)).kaleid(199),
