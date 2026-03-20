@@ -56,7 +56,7 @@
       pretty: () => osc(10, 0.01, 1).color(1, 0.1, 0.3).kaleid(2).modulate(noise(3, 0.1)).modulateRotate(osc(9),1,()=> mouse.y),
       fem: () => voronoi(()=>a.fft[0]*30).kaleid(5,5).modulateRepeat(shape(4,0,3),50,50,5,8).rotate(5).add(osc(30,0.1,1.5).kaleid(()=>a.fft[1]*10+3).mask(shape(55,1,80))),
       o: () => osc(9,0.1).kaleid(4,4).modulateRepeat(shape(4,4,4),35,30,5,5),
-      naked: () => gradient(()=>a.fft[0]*100).modulateRepeatX(noise(2),20,50).kaleid(()=>mouse.x/50).colorama(()=>mouse.y/10).mult(osc(()=>a.fft[3]*80)).pixelate(20),
+      naked: () => gradient(()=>a.fft[0]*100).modulateRepeatX(noise(2),20,50).kaleid(()=>mouse.x/50).colorama(()=>mouse.y/10).mult(osc(()=>a.fft[3]*80)).pixelate(20)
         
 },
 };
